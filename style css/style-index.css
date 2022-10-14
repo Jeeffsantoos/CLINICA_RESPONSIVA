@@ -1,279 +1,286 @@
-        /* INICIO DAS REGRAS GERAIS */
-    
-    * {
-        box-sizing: border-box;
-    }
-    
-    body {
-        margin: 0;
-        padding: 0;
-        color: #0000008c;
-        font-family: 'Source Sans Pro' sans-serif;
-    }
-    /* FIM DAS REGRAS GERAIS */
-    /* INICIO DAS REGRAS PARA DESKTOPS */
-    
-    .largura {
-        max-width: 1024px;
-        margin: 0 auto;
-    }
-    
-    .espacamento {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-    
-    header .largura {
-        min-height: 60px;
-        padding: 0 10px;
-        margin: 0 auto;
-    }
-    
-    header img {
-        width: 100px;
-    }
-    
-    .link-topo a:hover {
-        color: rgb(13, 24, 123);
-    }
-    
-    .link-topo {
-        display: flex;
-        padding: 15px 0;
-    }
-    
-    .link-topo a {
-        text-decoration: none;
-        color: rgb(255, 255, 255);
-        padding-left: 25px;
-        font-size: 18px;
-    }
-    
-    header {
-        background-color: #00cad1;
-    }
-    
-    .secao-fundo {
-        background-image: url('../assets/recepcao.png');
-        width: 100%;
-        height: 500px;
-        background-size: cover;
-        background-repeat: no-repeat;
-        position: relative;
-    }
-    
-    .secao-fundo-titulo {
-        display: flex;
-        align-items: center;
-        height: 100%;
-        color: #fff;
-        padding: 10px;
-    }
-    
-    .secao-fundo-titulo h1 {
-        font-weight: 500;
-        text-transform: uppercase;
-        font-size: 38px;
-        margin: 0;
-    }
-    
-    .secao-sobre {
-        margin: 35px auto;
-        text-align: center;
-        max-width: 600px;
-    }
-    
-    .secao-sobre-conteudo {
-        display: flex;
-        justify-content: center;
-    }
-    
-    .secao-sobre-conteudo h3 {
-        font-weight: 500;
-        text-transform: uppercase;
-        font-size: 18px;
-        margin: 30px 0 15px 0;
-    }
-    
-    .secao-sobre-conteudo ul {
-        display: flex;
-        align-items: flex-start;
-        flex-wrap: wrap;
-    }
-    
-    .secao-especialidades {
-        margin: 0 auto;
-        text-align: center;
-    }
-    
-    .secao-especialidades h1,
-    .secao-especialidades p {
-        max-width: 600px;
-        margin: 0 auto;
-        text-align: center;
-    }
-    
-    .secao-imagens {
-        display: flex;
-        flex-wrap: nowrap;
-    }
-    
-    .secao-imagem {
-        width: calc(100% / 3 - 40px);
-        margin: 20px;
-        border-radius: 3px;
-        box-shadow: 0px 1px 10px rgb(0 0 0 / 50%);
-    }
-    
-    .secao-imagem img {
-        width: 100%;
-    }
-    
-    .secao-imagem figcaption {
-        text-align: center;
-        padding: 10px;
-        text-transform: uppercase;
-    }
-    
-    .box-hora {
-        text-align: center;
-        margin-top: 20px;
-    }
-    
-    .box-hora a {
-        background-color: #00cad1;
-        color: #fff;
-        font-weight: 600;
-        text-transform: uppercase;
-        padding: 10px 20px;
-        text-decoration: none;
-        font-weight: 300;
-    }
-    
-    .box-hora a:hover {
-        color: rgb(3, 16, 65);
-    }
-    
-    .separar-texto p {
-        padding: 10px;
-    }
-    
-    .separar-texto {
-        margin-top: 35px;
-    }
-    
-    .mapa iframe {
-        width: 100%;
-        height: 400px;
-        margin-bottom: 30px;
-    }
-    
-    .fundo-rodape {
-        background-color: #0d6e71;
-        color: #fff;
-        padding: 15px;
-    }
-    
-    .fundo-rodape .texto {
-        text-align: center;
-    }
-    /* FIM DAS REGRAS PARA DESKTOP */
-    /* INICIO DAS REGRAS PARA DISPOSITIVOS MENORES */
-    
-    @MEDIA (max-width: 425px) {
-        header .largura {
-            flex-direction: column;
-        }
-        .topo-titulo {
-            margin: 10px 0px;
-        }
-        .link-topo {
-            width: 100%;
-            border-top: 1px solid #009fa5;
-            justify-content: space-around;
-        }
-        .secao-fundo {
-            height: 150px;
-        }
-        .secao-fundo-titulo h1 {
-            font-size: 18px;
-            line-height: 30x;
-            font-weight: 500;
-        }
-        .medico {
-            display: none;
-        }
-        .secao-sobre p {
-            font-size: 15px;
-            padding: 0 15px;
-        }
-        .secao-sobre-conteudo h3 {
-            font-size: 18px;
-            padding: 0 15px;
-        }
-        .secao-especialidades {
-            font-size: 15px;
-            padding: 0 1;
-        }
-        .secao-imagens {
-            flex-direction: column;
-            align-items: center;
-        }
-        .secao-imagem {
-            width: 80%;
-        }
-        iframe {
-            width: 80%;
-            padding: 0 10px;
-        }
-    }
-    
-    @media (min-width:426px) and (max-width: 768px) {
-        .topo-titulo {
-            margin: 10px 0px;
-        }
-        .medico {
-            display: none;
-        }
-        .secao-fundo {
-            height: 150px;
-        }
-        .secao-fundo-titulo h1 {
-            font-size: 18px;
-            line-height: 30x;
-            font-weight: 500;
-        }
-        .secao-sobre p {
-            font-size: 15px;
-            padding: 0 15px;
-        }
-        .secao-sobre-conteudo h3 {
-            font-size: 18px;
-            padding: 0 15px;
-        }
-        .secao-sobre-conteudo ul {
-            display: block;
-            text-align: justify;
-        }
-        .secao-especialidades {
-            font-size: 15px;
-            padding: 0 1;
-        }
-        .secao-imagens {
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        .secao-imagem {
-            width: calc(100% / 2 - 40px);
-        }
-        iframe {
-            width: 80%;
-            padding: 0 10px;
-        }
-    }
-    
-    @media ( min-width: 769px) (max-width: 1024px) {
-        .secao-fundo {
-            height: 400px;
-        }
+                                    /* INICIO DAS REGRAS GERAIS */
+                                
+                                * {
+                                    box-sizing: border-box;
+                                }
+                                
+                                body {
+                                    margin: 0;
+                                    padding: 0;
+                                    color: #0000008c;
+                                    font-family: 'Source Sans Pro' sans-serif;
+                                }
+                                /* FIM DAS REGRAS GERAIS */
+                                /* INICIO DAS REGRAS PARA DESKTOPS */
+                                
+                                .largura {
+                                    max-width: 1024px;
+                                    margin: 0 auto;
+                                }
+                                
+                                .espacamento {
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: space-between;
+                                }
+                                
+                                header .largura {
+                                    min-height: 60px;
+                                    padding: 0 10px;
+                                    margin: 0 auto;
+                                }
+                                
+                                header img {
+                                    width: 100px;
+                                }
+                                
+                                .link-topo a:hover {
+                                    color: rgb(13, 24, 123);
+                                }
+                                
+                                .link-topo {
+                                    display: flex;
+                                    padding: 15px 0;
+                                }
+                                
+                                .link-topo a {
+                                    text-decoration: none;
+                                    color: rgb(255, 255, 255);
+                                    padding-left: 25px;
+                                    font-size: 18px;
+                                }
+                                
+                                header {
+                                    background-color: #00cad1;
+                                }
+                                
+                                .secao-fundo {
+                                    background-image: url('../assets/recepcao.png');
+                                    width: 100%;
+                                    height: 500px;
+                                    background-size: cover;
+                                    background-repeat: no-repeat;
+                                    position: relative;
+                                }
+                                
+                                .secao-fundo-titulo {
+                                    display: flex;
+                                    align-items: center;
+                                    height: 100%;
+                                    color: #fff;
+                                    padding: 10px;
+                                }
+                                
+                                .secao-fundo-titulo h1 {
+                                    font-weight: 500;
+                                    text-transform: uppercase;
+                                    font-size: 38px;
+                                    margin: 0;
+                                }
+                                
+                                .secao-sobre {
+                                    margin: 35px auto;
+                                    text-align: center;
+                                    max-width: 600px;
+                                }
+                                
+                                .secao-sobre-conteudo {
+                                    display: flex;
+                                    justify-content: center;
+                                    padding-right: 35px;
+                                }
+                                
+                                .secao-sobre-conteudo h3 {
+                                    font-weight: 500;
+                                    text-transform: uppercase;
+                                    font-size: 18px;
+                                    margin: 30px 0 15px 0;
+                                }
+                                
+                                .secao-sobre-conteudo ul {
+                                    display: flex;
+                                    align-items: flex-start;
+                                    flex-wrap: wrap;
+                                    text-align: left;
+                                }
+                                
+                                .secao-especialidades {
+                                    margin: 0 auto;
+                                    text-align: center;
+                                }
+                                
+                                .secao-especialidades h1,
+                                .secao-especialidades p {
+                                    max-width: 600px;
+                                    margin: 0 auto;
+                                    text-align: center;
+                                }
+                                
+                                .secao-imagens {
+                                    display: flex;
+                                    flex-wrap: nowrap;
+                                }
+                                
+                                .secao-imagem {
+                                    width: calc(100% / 3 - 40px);
+                                    margin: 20px;
+                                    border-radius: 3px;
+                                    box-shadow: 0px 1px 10px rgb(0 0 0 / 50%);
+                                }
+                                
+                                .secao-imagem img {
+                                    width: 100%;
+                                }
+                                
+                                .secao-imagem figcaption {
+                                    text-align: center;
+                                    padding: 10px;
+                                    text-transform: uppercase;
+                                }
+                                
+                                .box-hora {
+                                    text-align: center;
+                                    margin-top: 20px;
+                                }
+                                
+                                .box-hora a {
+                                    background-color: #00cad1;
+                                    color: #fff;
+                                    font-weight: 600;
+                                    text-transform: uppercase;
+                                    padding: 10px 20px;
+                                    text-decoration: none;
+                                    font-weight: 300;
+                                }
+                                
+                                .box-hora a:hover {
+                                    color: rgb(3, 16, 65);
+                                }
+                                
+                                .separar-texto p {
+                                    padding: 10px;
+                                }
+                                
+                                .medico {
+                                    height: 250px;
+                                    object-fit: cover;
+                                }
+                                
+                                .separar-texto {
+                                    margin-top: 35px;
+                                }
+                                
+                                .mapa iframe {
+                                    width: 100%;
+                                    height: 400px;
+                                    margin-bottom: 30px;
+                                }
+                                
+                                .fundo-rodape {
+                                    background-color: #0d6e71;
+                                    color: #fff;
+                                    padding: 15px;
+                                }
+                                
+                                .fundo-rodape .texto {
+                                    text-align: center;
+                                }
+                                /* FIM DAS REGRAS PARA DESKTOP */
+                                /* INICIO DAS REGRAS PARA DISPOSITIVOS MENORES */
+                                
+                                @MEDIA (max-width: 425px) {
+                                    header .largura {
+                                        flex-direction: column;
+                                    }
+                                    .topo-titulo {
+                                        margin: 10px 0px;
+                                    }
+                                    .link-topo {
+                                        width: 100%;
+                                        border-top: 1px solid #009fa5;
+                                        justify-content: space-around;
+                                    }
+                                    .secao-fundo {
+                                        height: 150px;
+                                    }
+                                    .secao-fundo-titulo h1 {
+                                        font-size: 18px;
+                                        line-height: 30x;
+                                        font-weight: 500;
+                                    }
+                                    .medico {
+                                        display: none;
+                                    }
+                                    .secao-sobre p {
+                                        font-size: 15px;
+                                        padding: 0 15px;
+                                    }
+                                    .secao-sobre-conteudo h3 {
+                                        font-size: 18px;
+                                        padding: 0 15px;
+                                    }
+                                    .secao-especialidades {
+                                        font-size: 15px;
+                                        padding: 0 1;
+                                    }
+                                    .secao-imagens {
+                                        flex-direction: column;
+                                        align-items: center;
+                                    }
+                                    .secao-imagem {
+                                        width: 80%;
+                                    }
+                                    iframe {
+                                        width: 80%;
+                                        padding: 0 10px;
+                                    }
+                                }
+                                
+                                @media (min-width:426px) and (max-width: 768px) {
+                                    .topo-titulo {
+                                        margin: 10px 0px;
+                                    }
+                                    .medico {
+                                        display: none;
+                                    }
+                                    .secao-fundo {
+                                        height: 150px;
+                                    }
+                                    .secao-fundo-titulo h1 {
+                                        font-size: 18px;
+                                        line-height: 30x;
+                                        font-weight: 500;
+                                    }
+                                    .secao-sobre p {
+                                        font-size: 15px;
+                                        padding: 0 15px;
+                                    }
+                                    .secao-sobre-conteudo h3 {
+                                        font-size: 18px;
+                                        padding: 0 15px;
+                                    }
+                                    .secao-sobre-conteudo ul {
+                                        display: block;
+                                        text-align: justify;
+                                    }
+                                    .secao-especialidades {
+                                        font-size: 15px;
+                                        padding: 0 1;
+                                    }
+                                    .secao-imagens {
+                                        justify-content: center;
+                                        flex-wrap: wrap;
+                                    }
+                                    .secao-imagem {
+                                        width: calc(100% / 2 - 40px);
+                                    }
+                                    iframe {
+                                        width: 80%;
+                                        padding: 0 10px;
+                                    }
+                                }
+                                
+                                @media ( min-width: 769px) (max-width: 1024px) {
+                                    .secao-fundo {
+                                        height: 400px;
+                                    }
